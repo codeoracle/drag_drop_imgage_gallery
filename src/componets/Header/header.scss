@@ -21,13 +21,21 @@ $medium: 1200px;
         gap: 40px;
         flex-direction: column;
         color: #ffffff;
-        display: flex;
-        flex-direction: column;
         height: 100%;
         min-height: 550px;
-        // position: absolute;
         text-align: center;
         width: 100%;
+    
+         @media screen and (max-width: $medium) {
+        gap: 20px;
+        min-height: 350px;
+        }
+        //  mobile media query
+
+    @media screen and (max-width: $small) {
+            gap: 20px;
+            min-height: 350px;
+        }
 
     .headerTitle{
         font-size: 40px;
@@ -41,16 +49,18 @@ $medium: 1200px;
         //  medium media query
     
     @media screen and (max-width: $medium) {
-        font-size: 40px;
+        font-size: 25px;
         font-weight: 500;
-        max-width: 40%;
+        max-width: 100%;
+        line-height: 30px;
         }
         //  mobile media query
 
     @media screen and (max-width: $small) {
         font-size: 25px;
         font-weight: 500;
-        max-width: 40%;
+        max-width: 100%;
+        line-height: 30px;
         }
 
     }
@@ -67,15 +77,15 @@ $medium: 1200px;
         //  mobile media query
 
     @media screen and (max-width: $medium) {
-        max-width: 50%;
-        line-height: 1.5;
-        letter-spacing: 2px;
+        max-width: 90%;
+        font-size: 16px;
+        line-height: 20px;
         }
 
     @media screen and (max-width: $small) {
-        max-width: 80%;
-        line-height: 1.5;
-        letter-spacing: 2px;
+        max-width: 90%;
+        font-size: 16px;
+        line-height: 20px;
         }
     }
 
@@ -90,6 +100,18 @@ $medium: 1200px;
         font-size: 24px;
         font-weight: 500;
         cursor: pointer;
+
+    @media screen and (max-width: $medium) {
+        padding: 15px 20px;
+        font-size: 20px;
+        font-weight: 400;
+        }
+
+    @media screen and (max-width: $small) {
+        padding: 15px 20px;
+        font-size: 20px;
+        font-weight: 400;
+        }
 
         &:hover{
         color: #d8cece;

@@ -28,13 +28,16 @@ $medium: 1200px;
 
 
 .imgList{
-    display: flex;
-    flex-wrap: wrap;
+
+    display: grid;
+    // grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
 
 .imgCard{
     overflow: hidden;
-    max-width: 15rem;
+    max-width: 20rem;
+    max-height: 30rem;
     
     .imglink{
     text-decoration: none;
@@ -49,9 +52,12 @@ $medium: 1200px;
         // display: flex;
         position: relative;
         overflow: hidden;
+            max-width: 20rem;
         
         .img{
-            width: 100%;
+            width: 20rem;
+            height: 30rem;
+            object-fit: cover;
             
         }
 

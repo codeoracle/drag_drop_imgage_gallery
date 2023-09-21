@@ -7,7 +7,7 @@ import { SortableContext,  verticalListSortingStrategy, arrayMove, rectSortingSt
 import { SortableDetail } from '../../SortableDetail'
 import { data } from '../../data'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../firebase';
 
@@ -62,7 +62,7 @@ const onDragEnd = (event) =>{
             </div>
             <form  className="searchWrap" >
               <div className="inputWrap">
-            <input type="text" className='searchInput' placeholder='Features: Travel, Car, Nature,' value={search} onChange={(e) => setSearch(e.target.value)} />
+            <input type="text" className='searchInput' placeholder='Features: Travel, Car, Nature, Developer, Culture' value={search} onChange={(e) => setSearch(e.target.value)} />
 
             <SearchOutlinedIcon className='searchIcon'/>
               </div>
@@ -117,10 +117,10 @@ const onDragEnd = (event) =>{
                   {/* Footer */}
 
         <footer className="footer">
-          <span to={'https://yunus-mustapha.netlify.app/'} target='_blank' className='copyRight'>
+          <Link to={'https://yunus-mustapha.netlify.app/'} target='_blank' className='copyRight'>
                 © 2023 MovieBox by 
                    Yunus Mustapha Adedayo
-                   </span>
+                   </Link>
         </footer>
     </div>
   )

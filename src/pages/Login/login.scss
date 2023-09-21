@@ -1,3 +1,6 @@
+$small: 900px;
+$medium: 1200px;
+
 .login {
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,6 +27,21 @@
     max-width: 45%;
     text-align: center;
     text-shadow: 3px -1px 0px rgba(0, 0, 0, 0.94);
+
+        @media screen and (max-width: $medium) {
+        font-size: 30px;
+        font-weight: 500;
+        max-width: 90%;
+        }
+        //  mobile media query
+
+    @media screen and (max-width: $small) {
+        font-size: 30px;
+        font-weight: 500;
+        max-width: 90%;
+        }
+
+    
     }
 
     .content{
@@ -34,6 +52,18 @@
     color: #ffffff;
     text-align: center;
     text-shadow: 3px -1px 0px rgba(0, 0, 0, 0.94);
+
+@media screen and (max-width: $medium) {
+        max-width: 90%;
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: $small) {
+        max-width: 90%;
+        font-size: 14px;
+
+    }
+
     }
 
     .btn{
@@ -72,6 +102,18 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.275);
             text-align: center;
 
+@media screen and (max-width: $medium) {
+            width: 300px;
+            height: 400px;
+            padding: 30px;
+
+    }
+
+    @media screen and (max-width: $small) {
+        max-width: 90%;
+        font-size: 14px;
+
+    }
 
             .formTitle {
                 color: #967a0a;
