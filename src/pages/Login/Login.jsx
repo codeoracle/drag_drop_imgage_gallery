@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import './login.scss'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import CenterFocusWeakOutlinedIcon from '@mui/icons-material/CenterFocusWeakOutlined';
 import { auth } from '../../firebase';
 import {signInWithEmailAndPassword} from 'firebase/auth'
 
@@ -12,6 +13,7 @@ const Login = () => {
         const [switched, setSwitched] = useState(true)
         const [email, setEmail] = useState('');
         const [password, setPassword] = useState('');
+        const [errMessage, setErrMessage] = useState(false);
 
         const navigate = useNavigate()
 
@@ -25,13 +27,23 @@ const handleSubmit = async (e) =>{
         localStorage.setItem('user', JSON.stringify(user));
         navigate('/')
     } catch (error) {
+        setErrMessage(error);
         console.log(error);
+        
     }
 }
+
 
   return (
     <div className='login' style={{ backgroundImage: "url(./img/bg2.jpg)"
 }}>
+
+
+
+     <div className="LogoWrap">
+                <CenterFocusWeakOutlinedIcon className='icon'/>
+               <span className='logo'>fotohub</span>
+            </div>
 
         {/* Content */}
 
@@ -61,8 +73,8 @@ const handleSubmit = async (e) =>{
       <input type="password" id="password" placeholder="Password" name='password' value={password} onChange={(e) => setPassword(e.target.value)} required/>
             </div>
             <button  type="submit" className="signBtn">Login</button>
+        {errMessage && <span className='error'>Login with - Email: user@example.com | Password: 1Password</span>}
             </form>
-
         </div> 
         </div>}
     </div>

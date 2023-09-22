@@ -8,6 +8,17 @@ $medium: 1200px;
     height: 60vh;
     overflow: hidden;
 
+@media screen and (max-width: $medium) {
+        height: 75vh;
+
+    }
+
+    //  mobile media query
+
+    @media screen and (max-width: $small) {
+        height: 75vh;
+
+    }
 
 .headerContainer{
         //  display: flex;
@@ -100,6 +111,9 @@ $medium: 1200px;
         font-size: 24px;
         font-weight: 500;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 15px;
 
     @media screen and (max-width: $medium) {
         padding: 15px 20px;

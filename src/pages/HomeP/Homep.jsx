@@ -2,8 +2,9 @@ import './hoemp.scss'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import CenterFocusWeakOutlinedIcon from '@mui/icons-material/CenterFocusWeakOutlined';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { DndContext, closestCenter } from '@dnd-kit/core'
-import { SortableContext,  verticalListSortingStrategy, arrayMove, rectSortingStrategy } from '@dnd-kit/sortable'
+import { SortableContext,  arrayMove, rectSortingStrategy } from '@dnd-kit/sortable'
 import { SortableDetail } from '../../SortableDetail'
 import { data } from '../../data'
 import { useState } from 'react'
@@ -78,7 +79,7 @@ const onDragEnd = (event) =>{
             <div className="headerWrap">
             <h1 className="headerTitle">We understand the magic that happens when a perfect moment is captured. </h1>
             <span className="headerDesc">With our drag-and-drop interface, you have the power to curate your own visual journey. Arrange and rearrange images as you please, creating your own narratives and visual stories.</span>
-            <button className='btn'> Start now</button>
+            <button className='btn'><span>Start now</span><KeyboardArrowDownIcon/></button>
             </div>
         </div>
     </div>
@@ -118,7 +119,7 @@ const onDragEnd = (event) =>{
 
         <footer className="footer">
           <Link to={'https://yunus-mustapha.netlify.app/'} target='_blank' className='copyRight'>
-                © 2023 MovieBox by 
+                © 2023 fotohub by 
                    Yunus Mustapha Adedayo
                    </Link>
         </footer>

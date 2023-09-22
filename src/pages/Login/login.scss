@@ -6,10 +6,57 @@ $medium: 1200px;
     background-size: cover;
     height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+
+
+            .LogoWrap{
+                margin-top: 5%;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                cursor: pointer;
+    
+            .icon{
+                font-size: 40px;
+                font-weight: bold;
+                color: #ffffff;
+                padding: 4px;
+                border-radius: 5px;
+                background: #ba9811;
+
+        @media screen and (max-width: $medium) {
+                font-size: 30px;
+            }
+        
+            @media screen and (max-width: $small) {
+                font-size: 30px;
+            }
+
+            }
+    
+            .logo{
+                font-size: 40px;
+                font-weight: bold;
+                color: #ffffff;
+
+    @media screen and (max-width: $medium) {
+            font-size: 30px;  
+        }
+    
+        @media screen and (max-width: $small) {
+            font-size: 30px;
+        }
+            }
+            
+}
 
 .contentContainer{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 
 
 .contentCard{
@@ -78,6 +125,16 @@ $medium: 1200px;
         font-weight: 500;
         cursor: pointer;
 
+      @media screen and (max-width: $medium) {
+                padding: 15px 30px;
+                font-size: 20px;
+            }
+        
+            @media screen and (max-width: $small) {
+                padding: 15px 30px;
+                font-size: 20px;
+            }
+
         &:hover{
         color: #d8cece;
         background: #967a0a;
@@ -90,7 +147,7 @@ $medium: 1200px;
         display: flex;
         justify-content: center;
         align-items: center;
-        // height: 60vh;
+        height: 100%;
 
 
         .formCard {
@@ -163,19 +220,13 @@ $medium: 1200px;
             }
             }
 
-            .switch {
-                margin-top: 15px;
-                font-size: 14px;
-                display: flex;
-                justify-content: space-between;
+            .error {
+                color: #d4d4d4;
+                background: #d92e2e;
+                padding: 5px 10px;
+                margin-top: 2%;
+                border-radius: 5px;
             }
-
-            .switch a {
-                color: #b12025;
-                text-decoration: none;
-            }
-
         }
-
     }
 }

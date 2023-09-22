@@ -43,12 +43,32 @@ $medium: 1200px;
             padding: 4px;
             border-radius: 5px;
             background: #ba9811;
+
+    @media screen and (max-width: $medium) {
+            font-size: 20px;
+        }
+    
+        //  mobile media query
+    
+        @media screen and (max-width: $small) {
+            font-size: 20px;
+        }
+
         }
 
         .logo{
             font-size: 25px;
             font-weight: bold;
             color: #ffffff;
+
+         @media screen and (max-width: $medium) {
+        font-size: 20px;
+        }
+        //  mobile media query
+
+    @media screen and (max-width: $small) {
+        font-size: 20px;
+        }
 
         }
         }
@@ -119,10 +139,22 @@ $medium: 1200px;
             }
 
             .signIn{
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: 500;
                 color: #ffffff;
                 cursor: pointer;
+
+        @media screen and (max-width: $medium) {
+                font-size: 16px;
+               
+            }
+        
+            //  mobile media query
+        
+            @media screen and (max-width: $small) {
+                font-size: 16px;
+              
+            }
             }
 
             .signinIcon{
@@ -135,9 +167,16 @@ $medium: 1200px;
 
                 //  mobile media query
                 
-        @media screen and (max-width: $small) {
-                padding: 4px;
-                font-size: 25px;
+        @media screen and (max-width: $medium) {
+                font-size: 20px;
+                // padding:4px;
+            }
+        
+            //  mobile media query
+        
+            @media screen and (max-width: $small) {
+                font-size: 20px;
+                // padding: 4px;
             }
             }
         }
